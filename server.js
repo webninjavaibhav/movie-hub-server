@@ -31,7 +31,9 @@ if (process.env.NODE_ENV === "development") {
 //Mount routes
 app.use("/api/v1/movies", movies);
 app.use("/api/v1/auth", auth);
-
+app.get("/", (req, res) => {
+  res.send("Server is running");
+});
 app.use(errorHandler);
 
 // cloudinary.config({
