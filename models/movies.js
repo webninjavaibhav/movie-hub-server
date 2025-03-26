@@ -5,7 +5,7 @@ const MovieSchema = new mongoose.Schema({
   title: {
     type: String,
     required: [true, "Please provide a movie title"],
-    unique: [true,"Movie title is already taken"],
+    unique: true,
     trim: true,
     maxlength: [20, "Movie title cannot exceed 20 characters"],
     minlength: [2, "Movie title must be at least 2 characters long"]
